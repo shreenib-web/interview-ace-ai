@@ -1,25 +1,47 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
-    <section className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h1 className="text-5xl font-bold">
-          Ace Your Next Interview 🚀
-        </h1>
+    <section className="bg-slate-900 text-white min-h-[90vh] flex items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-        <p className="text-xl text-gray-300 mt-6">
-          Practice React, JavaScript, Node.js and more with quizzes,
-          coding challenges, flashcards and AI-powered learning.
-        </p>
+        {/* Left Content */}
+        <div>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            Ace Your Next <span className="text-cyan-400">Interview</span>
+          </h1>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <button className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">
-            Get Started
-          </button>
+          <p className="mt-6 text-lg text-slate-300">
+            Practice interview questions, solve coding challenges,
+            track your progress, and build confidence.
+          </p>
 
-          <button className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black">
-            Explore Questions
-          </button>
+          <div className="mt-8 flex gap-4">
+            <Link
+              to="/register"
+              className="bg-cyan-500 px-6 py-3 rounded-lg hover:bg-cyan-600"
+            >
+              Get Started
+            </Link>
+
+            <Link
+              to="/login"
+              className="border border-cyan-500 px-6 py-3 rounded-lg hover:bg-cyan-500"
+            >
+              Login
+            </Link>
+          </div>
         </div>
+
+        {/* Right Content */}
+        <div className="flex justify-center">
+          <div className="w-80 h-80 bg-cyan-500/20 rounded-3xl flex items-center justify-center">
+            <h2 className="text-3xl font-bold">
+              Dashboard Preview
+            </h2>
+          </div>
+        </div>
+
       </div>
     </section>
   );
