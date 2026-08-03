@@ -1,26 +1,39 @@
-function DailyGoal() {
+import StatCard from "../../components/dashboard/StatCard";
+import ProgressChart from "../../components/dashboard/ProgressChart";
+import DailyGoal from "../../components/dashboard/DailyGoal";
+
+function Dashboard() {
   return (
-    <div className="bg-slate-900 rounded-xl p-6 shadow-lg">
-      <h2 className="text-white text-xl font-semibold">
-        Today's Goal 🎯
-      </h2>
+    <div>
+      {/* Welcome */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-white">
+          Welcome Back 👋
+        </h1>
 
-      <p className="text-slate-400 mt-4">
-        Solve 10 React interview questions.
-      </p>
+        <p className="text-slate-400">
+          Here's your interview preparation summary.
+        </p>
+      </div>
 
-      <div className="mt-6">
-        <div className="flex justify-between text-sm text-slate-300 mb-2">
-          <span>Progress</span>
-          <span>6 / 10</span>
+      {/* Stats */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <StatCard title="Questions Solved" value="128" color="text-cyan-400" />
+        <StatCard title="Quiz Score" value="89%" color="text-green-400" />
+        <StatCard title="Current Streak" value="12 Days" color="text-yellow-400" />
+        <StatCard title="Bookmarks" value="42" color="text-pink-400" />
+      </div>
+
+      {/* Chart + Goal */}
+      <div className="grid lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <ProgressChart />
         </div>
 
-        <div className="w-full bg-slate-700 rounded-full h-3">
-          <div className="bg-cyan-400 h-3 rounded-full w-3/5"></div>
-        </div>
+        <DailyGoal />
       </div>
     </div>
   );
 }
 
-export default DailyGoal;
+export default Dashboard;
