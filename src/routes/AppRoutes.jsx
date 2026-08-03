@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/public/Home";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+
+import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/dashboard/Dashboard";
 
 function AppRoutes() {
@@ -11,9 +13,10 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+
+      <Route element={<DashboardLayout />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Route>
     </Routes>
   );
 }
