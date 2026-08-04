@@ -7,6 +7,7 @@ import Register from "../pages/auth/Register";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/dashboard/Dashboard";
 import ProgressChart from "../components/dashboard/ProgressChart";
+import Questions from "../pages/questions/Questions";
 
 function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ function AppRoutes() {
       <Route element={<DashboardLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/ProgressChart" element={<ProgressChart />} />
+        <Route path="/questions" element={<Questions />} />
       
       </Route>
     </Routes>
