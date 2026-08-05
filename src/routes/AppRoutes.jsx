@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../pages/public/Home";
-import Login from "../pages/auth/Login";
-import Register from "../pages/auth/Register";
+import Home from "../components/common/Home";
+import Login from "../features/auth/pages/Login";
+import Register from "../features/auth/pages/Register";
 
 import DashboardLayout from "../layouts/DashboardLayout";
-import Dashboard from "../pages/dashboard/Dashboard";
-import ProgressChart from "../components/dashboard/ProgressChart";
-import Questions from "../pages/questions/Questions";
+import Dashboard from "../features/dashboard/pages/Dashboard";
+import ProgressChart from "../features/dashboard/components/ProgressChart";
+import Questions from "../features/questions/pages/Questions";
 
 function AppRoutes() {
   return (

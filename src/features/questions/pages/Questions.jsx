@@ -1,5 +1,5 @@
-import questions from "../../data/questions";
-import QuestionCard from "../../components/questions/QuestionCard";
+import QuestionCard from "../components/QuestionCard";
+import questions from "../data/questions";
 
 function Questions() {
   return (

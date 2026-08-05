@@ -1,6 +1,6 @@
-import StatCard from "../../components/dashboard/StatCard";
-import ProgressChart from "../../components/dashboard/ProgressChart";
-import DailyGoal from "../../components/dashboard/DailyGoal";
+import DailyGoal from "../components/DailyGoal";
+import ProgressChart from "../components/ProgressChart";
+import StatCard from "../components/StatCard";
 
 function Dashboard() {
   return (
