@@ -18,6 +18,7 @@ function QuestionFilter({
         <option>HTML</option>
         <option>CSS</option>
         <option>Node.js</option>
+        <option>SQL</option>
       </select>
 
       <select
