@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import QuestionCard from "../components/QuestionCard";
 import QuestionFilter from "../components/QuestionFilter";
 import QuestionSearch from "../components/QuestionSearch";
+import useBookmarks from "../../../hooks/useBookmarks";
 import {
   cssQuestions,
   htmlQuestions,
@@ -24,6 +25,7 @@ function Questions() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [difficulty, setDifficulty] = useState("All");
+  const { bookmarks, toggleBookmark } = useBookmarks();
 
   const filteredQuestions = useMemo(() => {
     const searchTerm = search.trim().toLowerCase();
@@ -63,6 +65,8 @@ function Questions() {
           <QuestionCard
             key={question.id}
             question={question}
+            bookmarks={bookmarks}
+            toggleBookmark={toggleBookmark}
           />
         ))}
       </div>
