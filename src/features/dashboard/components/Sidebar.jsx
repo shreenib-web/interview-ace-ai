@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard,
+  Bot,
   BookOpen,
   FileQuestion,
   FileText,
@@ -12,6 +13,7 @@ const menus = [
   { name: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
   { name: "Questions", icon: FileQuestion, path: "/questions" },
   { name: "Quiz", icon: BookOpen, path: "/quiz" },
+  { name: "AI Interview", icon: Bot, path: "/ai-interview" },
   { name: "Resume", icon: FileText, path: "/resume" },
   { name: "Notes", icon: StickyNote, path: "/notes" },
   { name: "Settings", icon: Settings, path: "/settings" },
