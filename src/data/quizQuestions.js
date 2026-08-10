@@ -1,37 +1,19 @@
-const quizQuestions = [
-  {
-    id: 1,
-    question: "What is JSX?",
-    options: [
-      "JavaScript XML",
-      "Java Syntax",
-      "JSON XML",
-      "Java Extension"
-    ],
-    answer: "JavaScript XML"
-  },
-  {
-    id: 2,
-    question: "Which Hook is used for state?",
-    options: [
-      "useEffect",
-      "useState",
-      "useMemo",
-      "useRef"
-    ],
-    answer: "useState"
-  },
-  {
-    id: 3,
-    question: "Which company created React?",
-    options: [
-      "Google",
-      "Microsoft",
-      "Meta",
-      "Amazon"
-    ],
-    answer: "Meta"
-  }
-];
+import reactQuiz from "./reactQuiz.js";
+import javascriptQuiz from "./javascriptQuiz.js";
+import htmlQuiz from "./htmlQuiz.js";
+import cssQuiz from "./cssQuiz.js";
+import nodeQuiz from "./nodeQuiz.js";
+import sqlQuiz from "./sqlQuiz.js";
+
+const quizQuestions = {
+  React: reactQuiz,
+  JavaScript: javascriptQuiz,
+  HTML: htmlQuiz,
+  CSS: cssQuiz,
+  "Node.js": nodeQuiz,
+  SQL: sqlQuiz,
+};
+
+export const quizSubjects = Object.keys(quizQuestions);
 
 export default quizQuestions;
