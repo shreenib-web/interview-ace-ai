@@ -8,6 +8,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../features/dashboard/pages/Dashboard";
 import ProgressChart from "../features/dashboard/components/ProgressChart";
 import Questions from "../features/questions/pages/Questions";
+import Bookmarks from "../features/questions/pages/Bookmarks";
 import Quiz from "../pages/quiz/Quiz";
 import AIInterview from "../pages/aiInterview/AIInterview";
 
@@ -21,6 +22,7 @@ function AppRoutes() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/ProgressChart" element={<ProgressChart />} />
         <Route path="/questions" element={<Questions />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/ai-interview" element={<AIInterview />} />
       

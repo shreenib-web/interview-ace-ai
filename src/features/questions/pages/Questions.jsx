@@ -3,23 +3,7 @@ import QuestionCard from "../components/QuestionCard";
 import QuestionFilter from "../components/QuestionFilter";
 import QuestionSearch from "../components/QuestionSearch";
 import useBookmarks from "../../../hooks/useBookmarks";
-import {
-  cssQuestions,
-  htmlQuestions,
-  javascriptQuestions,
-  nodeQuestions,
-  reactQuestions,
-  sqlQuestions,
-} from "../../../data";
-
-const allQuestions = [
-  ...reactQuestions,
-  ...javascriptQuestions,
-  ...nodeQuestions,
-  ...htmlQuestions,
-  ...cssQuestions,
-  ...sqlQuestions,
-];
+import { allQuestions } from "../../../data";
 
 function Questions() {
   const [search, setSearch] = useState("");

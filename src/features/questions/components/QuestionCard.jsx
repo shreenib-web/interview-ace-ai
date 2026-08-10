@@ -6,7 +6,6 @@ function QuestionCard({ question, bookmarks, toggleBookmark }) {
 
   return (
     <div className="bg-slate-900 rounded-xl p-6 border border-slate-800">
-
       <div className="flex items-start justify-between gap-4">
         <h2 className="text-xl font-semibold text-white">
           {question.title}
@@ -15,8 +14,9 @@ function QuestionCard({ question, bookmarks, toggleBookmark }) {
         <button
           onClick={() => toggleBookmark(question.id)}
           className="text-2xl"
+          aria-label={isBookmarked ? "Remove bookmark" : "Add bookmark"}
         >
-          {isBookmarked ? "⭐" : "☆"}
+          {isBookmarked ? "\u2605" : "\u2606"}
         </button>
       </div>
 
@@ -43,7 +43,6 @@ function QuestionCard({ question, bookmarks, toggleBookmark }) {
         </div>
       )}
     </div>
-    
   );
 }
 
