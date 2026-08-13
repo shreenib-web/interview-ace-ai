@@ -23,17 +23,17 @@ function Hero() {
 
           <div className="mt-8 flex gap-4">
             <Link
-              to="/register"
+              to="/questions"
               className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-lg font-semibold"
             >
               Get Started
             </Link>
 
             <Link
-              to="/login"
+              to="/quiz"
               className="border border-cyan-500 px-6 py-3 rounded-lg hover:bg-cyan-500"
             >
-              Learn More
+              Take a Quiz
             </Link>
           </div>
         </div>

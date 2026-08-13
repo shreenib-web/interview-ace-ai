@@ -1,28 +1,28 @@
 import {
-  UserPlus,
   BookOpen,
   Code2,
   Trophy,
+  BarChart3,
 } from "lucide-react";
 
 const steps = [
   {
     id: 1,
-    title: "Create an Account",
-    description: "Sign up and set up your profile.",
-    icon: UserPlus,
-  },
-  {
-    id: 2,
     title: "Choose a Technology",
     description: "Select React, JavaScript, Node.js and more.",
     icon: BookOpen,
   },
   {
-    id: 3,
+    id: 2,
     title: "Practice & Take Quizzes",
     description: "Solve interview questions and coding challenges.",
     icon: Code2,
+  },
+  {
+    id: 3,
+    title: "Use AI Interviews",
+    description: "Get instant feedback on your interview answers.",
+    icon: BarChart3,
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ function HowItWorks() {
           </h2>
 
           <p className="text-slate-400 mt-4">
-            Start your interview preparation in four simple steps.
+            Start your interview preparation right away.
           </p>
         </div>
 

@@ -13,15 +13,15 @@ function Navbar() {
             Home
           </Link>
 
-          <Link to="/login" className="hover:text-cyan-400">
-            Login
+          <Link to="/questions" className="hover:text-cyan-400">
+            Questions
           </Link>
 
           <Link
-            to="/register"
+            to="/quiz"
             className="bg-cyan-500 px-4 py-2 rounded-lg hover:bg-cyan-600"
           >
-            Register
+            Quiz
           </Link>
         </div>
       </div>
