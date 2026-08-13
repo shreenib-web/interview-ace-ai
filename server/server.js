@@ -3,8 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import connectDB from "./config/db.js";
-import aiInterviewRoutes from "./routes/aiInterviewRoutes.js";
+import aiRoutes from "./routes/aiRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,15 +24,8 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.use("/api/ai", aiInterviewRoutes);
+app.use("/api/ai", aiRoutes);
 
-connectDB()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`InterviewAce API running on http://localhost:${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Failed to start server:", error.message);
-    process.exit(1);
-  });
+app.listen(PORT, () => {
+  console.log(`InterviewAce API running on http://localhost:${PORT}`);
+});
